@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Husky",
-    "image": "https://www.pexels.com/photo/adorable-animal-breed-canine-434090/"
+    "image": "https://images.pexels.com/photos/434090/pexels-photo-434090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350"
   },
   {
     "id": 2,
@@ -59,3 +59,4 @@
     "name": "Boxer",
     "image": "https://images.pexels.com/photos/605496/pexels-photo-605496.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350"
   }
+]

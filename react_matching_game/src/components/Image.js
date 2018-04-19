@@ -1,24 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-// const styles = {
-// };
 
-class Image extend Component {
-  state = {
-    image: "",
-    wasClicked: false
-  };
+const styles = {
+  width: 270,
+  height: 270,
+  float: "left",
+  display: "block",
+  backgroundSize: "cover",
+  backgroundPosition: "50%",
+  margin: "8px 25px",
+  cursor: "pointer"
+};
 
-  componentDidMount() {
-
-    }
-
-  render() {
+const Image = props => {
     return (
       <div className="card">
-        <div className="img-container">
-          <img alt={this.state.image} src={this.state.image} />
+        <div onClick={() => props} className="img-container">
+          <img style={styles} alt={props.image} src={props.image} />
         </div>
-  )
-}
-}
+      </div>
+      );
+    }
+
+  export default Image

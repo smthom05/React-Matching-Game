@@ -2,8 +2,16 @@ import React from 'react';
 
 const styles = {
   container: {
-    padding: 300,
-    background: "white"
+    background: "white",
+    display: "flex",
+    minHeight: "80%",
+    flexWrap: "wrap",
+    paddingTop: 50,
+    paddingBottom: 50,
+    justifyContent: "center",
+    width: "90%",
+    margin: "0px auto"
+
   }
 };
 
