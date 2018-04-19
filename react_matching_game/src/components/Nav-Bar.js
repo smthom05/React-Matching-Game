@@ -1,40 +1,41 @@
 import React, { Component } from 'react';
+import NavText from "./Nav-Text";
 
 const styles = {
   navbar: {
     background: "#4B399E",
-    padding: 10
-  },
-  title: {
-    textAlign: "left",
-    color: "white",
-    fontSize: 30,
-    paddingLeft: 50
-  },
-  guess: {
-    paddingLeft: 300,
     color: "white",
     fontSize: 30
   },
-  score: {
-    float: "right",
-    color: "white",
-    fontSize: 30
+  ul: {
+    margin: 0,
+    padding: 0,
+    display: "block",
+    listStyleType: "disc"
+  },
+
+  li: {
+    padding: "26px 0px",
+    width: "33.3%",
+    textAlign: "center",
+    display: "inline-block"
   }
 };
 
-class NavBar extends Component {
-render() {
+const NavBar = props => {
   return (
-  <div style={styles.navbar}>
-    <nav className="navbar fixed-top navbar-light bg-faded">
-  <span style= {styles.title}> Matching Game </span>
-  <span style={styles.guess}> You guessed </span>
-  <span style={styles.score}> Score: | Top Score: </span>
-    </nav>
-  </div>
-);
-}
+      <nav style={styles.navbar} className="navbar fixed-top">
+        <ul style={styles.ul}>
+          <li style={styles.li}> Matching Game </li>
+          <li style={styles.li}>
+          <NavText correctChoice={props.correctChoice}/>
+          </li>
+          <li style={styles.li}>
+          Score: {props.score} | Top Score: {props.topScore}
+          </li>
+        </ul>
+      </nav>
+    );
 }
 
 export default NavBar;
